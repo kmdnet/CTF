@@ -1,0 +1,11 @@
+01251190    55              PUSH EBP
+01251191    8BEC            MOV EBP,ESP
+01251193    FF15 04202501   CALL DWORD PTR DS:[1252004]              ; KERNEL32.IsDebuggerPresent
+01251199    85C0            TEST EAX,EAX
+0125119B    74 04           JE SHORT AntiD.012511A1
+0125119D    B0 01           MOV AL,1
+0125119F    EB 02           JMP SHORT AntiD.012511A3
+012511A1    32C0            XOR AL,AL
+012511A3    5D              POP EBP
+012511A4    C3              RETN
+
