@@ -19,13 +19,11 @@
 012513C3    0FB6D0          MOVZX EDX,AL
 012513C6    85D2            TEST EDX,EDX
 012513C8    74 0F           JE SHORT AntiD.012513D9
-012513CA    68 44212501     PUSH AntiD.01252144                      ; ASCII "Well done! A+! You get a gold star!
-"
+012513CA    68 44212501     PUSH AntiD.01252144                      ; ASCII "Well done! A+! You get a gold star!"
 012513CF    E8 7CFCFFFF     CALL AntiD.01251050
 012513D4    83C4 04         ADD ESP,4
 012513D7    EB 0D           JMP SHORT AntiD.012513E6
-012513D9    68 6C212501     PUSH AntiD.0125216C                      ; ASCII "You wrong, why you so wrong at this?
-"
+012513D9    68 6C212501     PUSH AntiD.0125216C                      ; ASCII "You wrong, why you so wrong at this?"
 012513DE    E8 6DFCFFFF     CALL AntiD.01251050
 012513E3    83C4 04         ADD ESP,4
 012513E6    33C0            XOR EAX,EAX
