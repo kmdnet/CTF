@@ -1,5 +1,3 @@
-
-
 def decode(arg):
 	try:
 		eax = arg
@@ -20,20 +18,17 @@ def decode(arg):
 			edx &= 0xFF
 			ebp_30 = edx
 
-
 			# func2 FindWindowW "OLLYDBG"
 			ecx  = ebp_30
 			ecx ^= 0x55
 			ecx &= 0xFF
 			ebp_30 = ecx
 
-
 			# func3 IsDebuggerPresent
 			eax  = ebp_30
 			eax -= 0x66
 			eax &= 0xFF
 			ebp_30 = eax
-
 
 			# func4 
 			edx  = ebp_38
@@ -59,6 +54,7 @@ def decode(arg):
 		return True
 	except:
 		return ebp_34
+
 
 password = [ \
 0x8C,\
@@ -105,8 +101,6 @@ password = [ \
 
 def main():
 	word = ""
-
-	
 	for i in range(0,40):
 		for x in range(33,126):
 			word += chr(x)
@@ -116,5 +110,6 @@ def main():
 			word = word[:-1]
 	
 	print word
+
 
 main()
